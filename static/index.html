@@ -71,15 +71,15 @@ navigation">
   <!-- /.container -->
   <script>
   (function() {
-  let xhr = new XMLHttpRequest();
+    let xhr = new XMLHttpRequest();
 	xhr.open("GET", "/weather.json);
-	xhr.onoad = function (){
+	xhr.onload = function (){
 		let myWeather = JSON.parse(xhr.responseText);
-		let temp = myWeather.currentWeather;
+		let temp = myWeather.currentWeather.temperature;
 		let weatherSpot = document.querySelector("#weather");
 		weatherSpot.textcontent = temp;
 	};
-		xhr.send();
+    xhr.send();
   )) ();
   </script>
 </body>
