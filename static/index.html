@@ -75,10 +75,9 @@ navigation">
 	xhr.open("GET", "/weather.json);
 	xhr.onoad = function (){
 		let myWeather = JSON.parse(xhr.responseText);
-		let someThing = myWeather.currentlocation.currentWeather;
+		let temp = myWeather.currentWeather.temperature;
 		let weatherSpot = document.querySelector("#weather");
-		weatherSpot.textcontent = someThing;
-		console.log(xhr.responseText);
+		weatherSpot.textcontent = temp;
 	};
 		xhr.send();
   
